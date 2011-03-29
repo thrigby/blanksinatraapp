@@ -1,0 +1,31 @@
+<form id="formx" method="get" action="/add">
+<input id="x" type="text" name="x" />
++
+<input id="y" type="text" name="y" />
+<input id ="button" input type="submit" value="clicky clicky" />
+</form>
+
+<div id="total"> </div>
+
+<div> Hello World </div>
+<script>
+$(function() {
+	$("#x").focus();
+	$("#button").click(function(){
+		$("#total").load("/add", $("#formx").serialize());
+		// this is a convention for handling ANY event in javascript
+		// very often you want to block something from happening (like submitting a form- return false is th eway to do it)
+		// yes
+		// very important lession
+		// fuck me
+		// am ESL
+		// Ruby is my first language
+		// thak you come again
+		// if (you want it to keep doing what it was doing before - going to the next page)
+		//  return true;
+		// else
+		//  return false;
+		return false;
+	})
+})
+</script>
